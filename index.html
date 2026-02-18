@@ -5,14 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HootSolvedIt</title>
   </head>
-  <body></body>
-  <script>
-    let ws;
-    const proto = window.location.protocol === "https:" ? "wss" : "ws"; // dynamically set WebSocket protocol
-    ws = new WebSocket(`${proto}://${window.location.host}`);
-
-    ws.onmessage = (event) => {
-      console.log(event.data);
-    };
-  </script>
+  <body>
+    <div id="root">not rendered</div>
+    <script type="module" src="./src/app.js"></script>
+  </body>
 </html>
