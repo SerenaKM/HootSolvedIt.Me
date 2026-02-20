@@ -38,15 +38,14 @@ export default function Game() {
     fetchMysteryCases();
   }, []);
 
+  function addCrimeScene() {
+    fetchCrimeScene(selectedCase.id);
+  }
+
   return (
     <div className="new-case">
       <h2>Select Mystery Case</h2>
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          fetchCrimeScene(selectedCase.id);
-        }}
-      >
+      <form action={addCrimeScene}>
         <div>
           <div>
             <label htmlFor="case"></label>
