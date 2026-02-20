@@ -3,7 +3,7 @@ Title of the project: Creating a HootSolvedIt.Me website which is a frontend gam
 Name: Serena KM 
 
 Idea: 
-•	I started with Murder Mystery API repo but as I continued in my Frontend Masters studies, after following along with Jem Young's Full Stack Fundamentals v3, I decided to expand the idea out to also include a frontend board game that expands on the Murder Mystery API idea
+•	I started with Murder Mystery API repo but as I continued in my Frontend Masters studies, after following along with Jem Young's Full Stack Fundamentals v3, I decided to expand the idea out to also include a full-stack board game that expands on the Murder Mystery API idea
 
 Requirements:
 •	Snakes and ladders style board game where you roll the dice to progress and land on either a clue tile, challenge tile, suspect tile, crime scene tile
@@ -17,6 +17,8 @@ Reflection (process, challenges, successes, learnings):
 •	Thinking ahead in terms of database schemas e.g. if I wanted to add the ability to add users and for users to save their game session
 •	Seeding databases when there is a dependency on a UUID - using indexes instead of the Id and making sure that your indexes start at 0 when you only have one item in the JSON file
 •	Learning to use Express.js, Node.js, Zod schemas, Nginx, Docker, Bash, TypeScript, Vitest, Supertest for HTTP assertion, using CLI/Ubuntu, buying a domain, setting up a server, linking a database
+•	Making sure to drill down into the object and not accidentally just passing the object as a key containing the properties I want to access
+•	Learning React, Vite, Tanstack, Eslint with Brian Holt's Complete Intro to React, v9 and implementing a front-end
 
 Entity Relationship Diagram
 +-------------------------+                +-------------------------+

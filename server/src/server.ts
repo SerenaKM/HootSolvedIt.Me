@@ -5,10 +5,11 @@ import crimeSceneRoutes from "./routes/crimeSceneRoutes.ts";
 import suspectRoutes from "./routes/suspectsRoutes.ts";
 import cluesRoutes from "./routes/cluesRoutes.ts";
 import gameSessionRoutes from "./routes/gameSessionRoutes.ts";
+import boardTileRoutes from "./routes/boardTileRoutes.ts";
 import cors from "cors";
 import morgan from "morgan";
 import helmet from "helmet";
-import { isTest } from "../env.ts";
+import { isTest } from "../../env.ts";
 import { errorHandler } from "./middleware/errorHandler.ts";
 
 const app = express();
@@ -38,11 +39,13 @@ app.get("/health", (req, res) => {
 });
 
 // routes
+app.use("/api/cases", caseRoutes);
 app.use("/api/case", caseRoutes);
 app.use("/api/crimescene", crimeSceneRoutes);
 app.use("/api/suspects", suspectRoutes);
 app.use("/api/clues", cluesRoutes);
 app.use("/api/gamesessions", gameSessionRoutes);
+app.use("/api/boardtile", boardTileRoutes);
 
 app.use(errorHandler);
 

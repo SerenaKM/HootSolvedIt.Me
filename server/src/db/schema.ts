@@ -47,6 +47,7 @@ export const gameSessions = pgTable("game_sessions", {
 // db for cases
 export const cases = pgTable("cases", {
   id: uuid("id").primaryKey().defaultRandom(),
+  name: varchar("case_name", { length: 100 }).notNull(),
   background: text("background"),
   createdAt: timestamp("created_at").defaultNow().notNull(),
   updatedAt: timestamp("updated_at").defaultNow().notNull(),

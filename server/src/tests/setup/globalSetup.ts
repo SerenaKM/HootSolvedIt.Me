@@ -1,4 +1,4 @@
-import { db } from "../../src/db/connection.ts";
+import { db } from "../../db/connection.ts";
 import {
   cases,
   suspects,
@@ -6,7 +6,7 @@ import {
   clues,
   gameSessions,
   boardTiles,
-} from "../../src/db/schema.ts";
+} from "../../db/schema.ts";
 import { sql } from "drizzle-orm";
 import { execSync } from "child_process";
 

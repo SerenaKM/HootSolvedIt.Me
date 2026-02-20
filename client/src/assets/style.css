@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+nav {
+  width: 100%;
+  display: grid;
+  grid-template-areas: ". logo .";
+}
+
+h1 {
+  font-family: "Rancho", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.logo {
+  width: 500px;
+  height: auto;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+nav .logo {
+  grid-area: logo;
+}
+
+.mystery-case-icon,
+.crime-scene-icon,
+.dice-image {
+  width: 100px;
+  height: auto;
+}

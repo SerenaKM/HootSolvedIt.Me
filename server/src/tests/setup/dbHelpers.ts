@@ -1,4 +1,4 @@
-import { db } from "../../src/db/connection.ts";
+import { db } from "../../db/connection.ts";
 import {
   cases,
   crimeScenes,
@@ -6,7 +6,7 @@ import {
   clues,
   boardTiles,
   NewCase,
-} from "../../src/db/schema.ts";
+} from "../../db/schema.ts";
 
 export const createTestCase = async (caseData: Partial<NewCase> = {}) => {
   const defaultData = {
