@@ -5,9 +5,9 @@ export default function Header() {
     <nav>
       <Link to="/">
         <img
-          src="/client/src/assets/cover-img.png"
+          src="/client/src/images/cover-img.png"
           alt="cover-image"
-          className="logo"
+          className="logo img"
         />
       </Link>
     </nav>

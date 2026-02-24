@@ -3,7 +3,7 @@ const CrimeScene = (props) => {
     <div className="crime-scene">
       <h1>{props.location}</h1>
       <p>{props.description}</p>
-      <img src={props.image} alt={props.name} className="crime-scene-icon" />
+      <img src={props.image} alt={props.name} className="icon" />
     </div>
   );
 };

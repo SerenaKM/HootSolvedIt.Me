@@ -54,6 +54,9 @@ export default function Game() {
               name="case"
               value={mysteryCase}
             >
+              <option aria-valuetext="" selected>
+                Please select mystery case
+              </option>
               {mysteryCases.map((mystery) => (
                 // transform an array of objects into an array of React elements
                 <option key={mystery.id} value={mystery.id}>
@@ -63,7 +66,7 @@ export default function Game() {
             </select>
           </div>
         </div>
-        <button type="submit">Choose</button>
+        <p />
         {loading || !selectedCase ? (
           <h1></h1>
         ) : (
@@ -71,25 +74,31 @@ export default function Game() {
             <MysteryCase
               name={selectedCase.name}
               background={selectedCase.background}
-              image="client/src/assets/research.png"
+              image="client/src/images/research.png"
             />
           </div>
         )}
+        <p />
+        <button className="button" type="submit">
+          Choose
+        </button>
         {loading || !crimeScene?.id ? (
           <h1></h1>
         ) : (
-          <div className="crime-scene">
+          <div className="crime-scene-grid">
             <CrimeScene
               location={crimeScene.location}
               description={crimeScene.description}
-              image="client/src/assets/police-line.png"
+              image="client/src/images/police-line.png"
             />
-            <Link to="/start">
-              <img
-                src="client/src/assets/dice.gif"
-                className="dice-image"
-              ></img>
-            </Link>
+            <div className="dice-button">
+              <Link to="/start">
+                <img
+                  src="client/src/images/dice.png"
+                  className="dice-icon"
+                ></img>
+              </Link>
+            </div>
           </div>
         )}
       </form>

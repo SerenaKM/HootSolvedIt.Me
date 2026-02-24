@@ -1,0 +1,206 @@
+@font-face {
+  font-family: Rancho;
+  src: local(Rancho), url(../fonts/Rancho-Regular.ttf);
+}
+
+@font-face {
+  font-family: Inter;
+  src: local(Inter), url(../fonts/Inter-VariableFont_opsz\,wght.ttf);
+}
+
+:root {
+  --color-accent-400: hsl(300 50% 40%);
+  --color-accent-300: hsl(300 60% 50%);
+  --color-button: hsl(345 50% 45%);
+  --color-background-light: hsl(280 80% 90%);
+  --color-background-medium: hsl(280, 70%, 36%);
+  --color-background-dark: hsl(280 50% 20%);
+  --color-neutral-100: hsl(0 0% 100%);
+  --color-neutral-800: hsl(0 0% 20%);
+
+  --font-family-base: "Inter", sans-serif;
+  --font-family-accent: "Rancho", cursive;
+
+  --font-size-400: 1.125rem;
+  --font-size-500: 1.3125rem;
+  --font-size-600: 1.5rem;
+  --font-size-700: 2.25rem;
+  --font-size-800: 3rem;
+
+  @media (width > 960px) {
+    --font-size-600: 2rem;
+    --font-size-700: 3rem;
+    --font-size-800: 4rem;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  background-color: var(--color-background-dark);
+  font-size: var(--font-size-400);
+  font-family: var(--font-family-base);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0px;
+}
+
+nav {
+  display: flex;
+  text-align: center;
+}
+
+h1,
+h2 {
+  color: var(--color-accent-400);
+  line-height: 1.1;
+}
+
+h1 {
+  font-family: var(--font-family-accent);
+  font-weight: 400;
+  font-style: normal;
+  font-size: var(--font-size-800);
+}
+
+h2 {
+  font-size: var(--font-size-700);
+}
+
+h3 {
+  font-size: var(--font-size-600);
+}
+
+a {
+  color: var(--color-neutral-100);
+}
+
+a:hover,
+a:focus-visible {
+  color: inherit;
+}
+
+.button,
+select {
+  font: inherit;
+}
+
+.button {
+  background-color: var(--color-button);
+  border: 0;
+  padding: 0.5em 1.5em;
+}
+
+.button:hover,
+.button:focus-visible {
+  background-color: var(--color-neutral-800);
+  color: var(--color-neutral-100);
+}
+
+.hero {
+  text-align: center;
+}
+
+.hero-content,
+.new-case,
+.game-board {
+  max-width: 900px;
+  font-size: var(--font-size-500);
+  margin-inline: auto;
+  background-color: var(--color-background-light);
+  padding: 50px;
+  padding-inline: 1rem;
+}
+
+.hero-content > :first-child {
+  margin-block-start: 0;
+}
+
+.hero-content > :last-child {
+  margin-block-end: 0;
+}
+
+.game-board {
+  display: grid;
+  padding: 50px;
+  gap: 21px;
+
+  @media (width > 720px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+.board-tile {
+  background-color: var(--color-background-medium);
+  padding: 1rem;
+  padding-block-start: 85px;
+  position: relative;
+}
+
+.tile-number {
+  font-family: var(--font-family-accent);
+  color: var(--color-neutral-800);
+  background-color: var(--color-accent-300);
+  padding: 10px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+
+.dice-roll-outcome,
+.reveal {
+  grid-column: span 5;
+}
+
+.chosen-case {
+  border: 5px solid var(--color-accent-300);
+  padding: 50px;
+}
+
+.crime-scene {
+  padding: 50px;
+}
+
+.logo {
+  max-width: 50%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.icon,
+.dice-icon {
+  max-width: 100px;
+}
+
+.dice-button {
+  margin: 20px;
+  justify-self: center;
+  transition-property: transform;
+  transition-duration: 200ms;
+}
+
+.dice-button:hover {
+  scale: 1.1;
+  rotate: 180deg;
+}
+
+.dice-button:active {
+  scale: 0.875;
+}
+
+.mascot-image {
+  max-width: 80%;
+}
+
+.credits {
+  background-color: var(--color-neutral-800);
+  background-image: linear-gradient(var(--color-background-dark), black);
+  padding: 100px;
+  color: var(--color-neutral-100);
+  text-align: center;
+}

@@ -16,11 +16,8 @@ export default function Credits() {
         Crime scene icons created by Freepik - Flaticon
       </a>
       <p />
-      <a
-        href="https://www.flaticon.com/free-animated-icons/dice"
-        title="dice animated icons"
-      >
-        Dice animated icons created by Freepik - Flaticon
+      <a href="https://www.flaticon.com/free-icons/dice" title="dice icons">
+        Dice icons created by Nikita Golubev - Flaticon
       </a>
     </div>
   );
